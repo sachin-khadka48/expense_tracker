@@ -128,3 +128,76 @@ input {
   text-align: center;
   padding: 12px;
 }
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filters {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 12px;
+}
+
+select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0b1220;
+  color: var(--text);
+}
+
+.error {
+  color: #f87171;
+  font-size: 12px;
+  min-height: 16px;
+}
+
+.list li {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  background: #0b1220;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.list .item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.charts {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+input:focus, button:focus, select:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.file-btn input {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .filters {
+    grid-template-columns: 1fr;
+  }
+  .charts {
+    grid-template-columns: 1fr;
+  }
+  .list li {
+    grid-template-columns: 1fr;
+  }
+}
